@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} No se ha enviado {% endblock %}
+
+{% block cabecera %} Hubo un error {% endblock %}
+
+{% block contenido %}
+
+<p> Su mensaje no ha sido enviado, Intente nuevamente </p>
+<img src="{% static 'img/No enviado.png' %}" alt="">
+{% endblock %}

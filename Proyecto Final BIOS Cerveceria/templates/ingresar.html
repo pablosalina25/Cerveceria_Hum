@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %} ingresar {% endblock %}
+
+{% block cabecera %}ingrese al sitio{% endblock %}
+
+{% block contenido %}
+
+<p style="text-align: center;"> Nos alegra verte de nuevo </p>
+
+
+<form  style="text-align: center;" method="POST" action="">{% csrf_token %}
+{% for campo in formulario %}
+<p>{{campo.label_tag}}</p>
+<p>{{campo}}</p>
+
+
+{% endfor %}
+
+<input type="submit" value="Ingresar">
+
+</form>
+
+<div class="image-container">
+<img src="{% static 'img/ingresa.jpg' %}" alt="">
+</div>
+
+{% endblock %}

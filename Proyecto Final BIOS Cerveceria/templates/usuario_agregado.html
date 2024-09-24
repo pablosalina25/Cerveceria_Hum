@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %} Usuario agregado {% endblock %}
+
+{% block cabecera %} Usuario agregado correctamente {% endblock %}
+
+{% block contenido %}
+    <p style="text-align: center;" >Felicidades! Ya sos parte de la comunidad Hum.</p>
+
+    <div class="image-container">
+    <img src="{% static 'img/registrado.png' %}" alt="Usuario agregado">
+</div>
+
+{% endblock %}

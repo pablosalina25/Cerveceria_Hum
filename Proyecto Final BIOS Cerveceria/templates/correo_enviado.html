@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Enviado {% endblock %}
+
+{% block cabecera %} Enviado correctamente {% endblock %}
+
+{% block contenido %}
+
+<p style="text-align: center;"> Su mensaje ha sido enviado correctamente.
+    Le responderemos a la brevedad </p>
+
+<br> 
+
+<div class="image-container">
+<img src="{% static 'img/enviado.jpg' %}" alt="">
+</div>
+{% endblock %}
+

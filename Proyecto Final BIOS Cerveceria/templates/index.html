@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block cabecera %} Cerveceria Hum {% endblock %}
+
+{% block contenido %}
+<p class="animated-title"> Cervezas del mundo </p>
+
+<div class="image-container">
+<img src="{% static 'img/Logo Hum.png' %}" alt="foto de cerveceria">
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %}Bienvenido {% endblock %}
+
+{% block cabecera %}Bienvenido/a a Hum{% endblock %}
+
+{% block contenido %}
+
+<p style="text-align: center;" > Bienvenido/a {{usuario}}</p>
+
+<br>
+
+<p style="text-align: center;" > Nos alegra mucho tenerte de vuelta.
+     Prepárate para sumergirte en el mundo de las cervezas artesanales. </p>
+
+<div class="image-container">
+<img src="{% static 'img/Bienvenido.jpg' %}" alt="">
+</div>
+
+{% endblock %}

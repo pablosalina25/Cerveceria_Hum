@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %}Resultados{% endblock %}
+
+{% block cabecera %}Resultados{% endblock %}
+
+{% block contenido %}
+
+{% if cerveza %}
+<div class="center-content">
+
+<p> Hemos encontrado lo siguiente:</p>
+
+<br>
+
+{% for cerveza in cerveza %}
+ <p>Nombre: {{cerveza.nombre}}</p>
+ <p>Fabricante: {{cerveza.fabricante}}</p>
+ <img class="resultado-imagen" src="{{ cerveza.portada.url }}" alt="">
+ 
+{% endfor %}
+
+</div>
+
+{% else %}
+
+<p style="text-align: center;"> Ups.. No se ha encontrado nada </p>
+
+
+<div class="image-container">
+    <img src="{% static 'img/nada.jpg' %}" alt="sin resultados">
+    </div>
+
+{% endif %}
+
+{% endblock %}

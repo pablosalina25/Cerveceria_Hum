@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %} Registro {% endblock %}
+
+{% block cabecera %} Registrate en nuestra web {% endblock %}
+
+{% block contenido %}
+
+<p style="text-align: center;"> ¡Qué bueno que elegiste ser parte de nuestra comunidad cervecera! 🍻
+     Creemos que cada sorbo cuenta una historia y estamos emocionados de que te unas a nosotros en este viaje.
+      Antes de que puedas disfrutar de nuestras cervezas únicas y deliciosas, necesitamos que completes este formulario.</p>
+
+<form style="text-align: center;" method="post" action="">{% csrf_token %}
+    {% for campo in formulario %}
+    <p>{{ campo.label_tag}} </p>
+    <p> {{ campo }}</p>
+    {% for error in campo.errors %}
+    <p style="color: red;">{{error}} </p>
+        {% endfor %}
+    {% endfor %}
+    <input type="submit" value="Registrate" style="margin-bottom: 20px;"> 
+</form>
+
+<div class="image-container">
+<img src="{% static 'img/registrate.jpg' %}" alt="">
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %} 404 {% endblock %}
+
+{% block cabecera %}Error 404 {% endblock %}
+
+{% block contenido %}
+
+<p> <strong>¡Oops! Se nos derramó la cerveza... </strong>
+
+    Parece que te has servido una página que no existe. Pero no te preocupes, mientras limpiamos este pequeño desastre,
+     ¿qué tal si te relajas con una de nuestras cervezas artesanales? </p>
+
+     <img src="{% static 'img/404.png' %}" alt="">
+
+{% endblock %}

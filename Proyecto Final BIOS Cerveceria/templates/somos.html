@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %} ¿Quiénes somos? {% endblock %}
+
+{% block cabecera %} ¿Quiénes somos? {% endblock %}
+
+{% block contenido %}
+
+<p> En 2021, cuatro amigos decidimos revolucionar la escena cervecera de Paso de los Toros.
+     Desde entonces, HUM se ha convertido en un referente de calidad y variedad en cervezas artesanales.
+     Hoy, te ofrecemos una cuidada selección de las mejores cervezas nacionales e internacionales,
+      para que puedas disfrutar de una experiencia cervecera única en cada sorbo. En HUM,
+       buscamos sorprenderte con nuevos sabores y estilos, siempre priorizando la calidad y la autenticidad. </p>
+
+
+<div class="image-container">
+    <img src="{% static 'img/quienes.jpg' %}" alt="Imagen de quienes somos">
+</div>
+
+{% endblock %}

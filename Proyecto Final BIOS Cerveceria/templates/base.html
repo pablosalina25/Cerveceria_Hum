@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/Logo cerveza.png' %}">
+</head>
+<body>
+    <header>
+        <h2 class="cabecera-animada"> {% block cabecera %} {% endblock %}</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'inicio'%}">Inicio</a></li> 
+            <li><a href="{% url 'somos' %}">Quienes somos</a></li>
+            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            {% if request.user.is_anonymous %}
+            <li><a href="{% url 'registro' %}">Registrate</a></li>
+            <li><a href="{% url 'ingresar' %}">Ingresar</a></li>
+            {% else %}
+            <li><a href="{% url 'salir' %}">Salir</a></li>
+            {% endif %}
+            
+        </ul>
+    </nav>
+
+    <form id="busqueda"method="get" action="/busqueda">
+        <p> Buscar producto o fabricante </p> 
+        <input type="text" name="buscar">
+        <input type="submit"value="Busqueda" >
+    </form>
+    <section>
+        {% block contenido %} {% endblock %}
+    </section>
+    <footer>
+        <p> Sitio con fines educativos curso BIOS &copy; </p>
+    </footer>
+</body>
+</html>
